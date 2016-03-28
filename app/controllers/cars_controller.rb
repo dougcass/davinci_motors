@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
   def index
+    @cars = Car.all
   end
 
   def new
@@ -15,6 +16,17 @@ class CarsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    @car.update(car_params)
+    update_message = "Product was successfully updated."
+  redirect_to cars_path, notice: update_message
   end
 
   private
