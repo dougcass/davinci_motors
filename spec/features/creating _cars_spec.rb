@@ -12,7 +12,7 @@ feature 'Creating Cars' do
     fill_in 'Price', with: '2300'
 
     click_button 'Create Car'
-
+save_and_open_page
     expect(page).to have_content('1967 Ford Mustang created')
   end
 
