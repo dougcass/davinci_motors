@@ -4,7 +4,9 @@ gem 'rspec-rails'
 gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'factory_girl_rails'
-
+gem 'launchy'
+gem 'faker'
+gem 'shoulda-matchers'
 group :test do
   gem 'capybara'
 end
